@@ -3,6 +3,15 @@ import { connect, styled } from "frontity";
 import Link from "./link";
 import Nav from "./nav";
 
+export default connect(Header);
+
+const SiteBrandingContainer = styled.div``;
+const SiteBranding = styled.div`
+  @media only screen and (min-width: 768px) {
+    margin: 0px calc(10% + 60px);
+  }
+`;
+
 const Header = ({ state }) => (
   <Container>
     <SiteBrandingContainer>
@@ -17,13 +26,13 @@ const Header = ({ state }) => (
   </Container>
 );
 
-export default connect(Header);
+const StyledLink = styled(Link)`
+  text-decoration: none;
+  outline: none;
+  display: inline;
 
-const SiteBrandingContainer = styled.div``;
-
-const SiteBranding = styled.div`
-  @media only screen and (min-width: 768px) {
-    margin: 0px calc(10% + 60px);
+  &:focus {
+    outline: none;
   }
 `;
 
@@ -36,23 +45,6 @@ const Container = styled.header`
   @media only screen and (min-width: 768px) {
     margin: 0px;
     padding: 3rem 0;
-  }
-`;
-
-const Title = styled.h1`
-  display: inline;
-  margin: auto;
-  color: #111;
-  font-weight: normal;
-  font-size: 1.125em;
-
-  &:not(.site-title):before {
-    display: none;
-  }
-
-  &:focus {
-    outline: thin dotted;
-    text-decoration: underline;
   }
 `;
 
@@ -77,12 +69,19 @@ const Description = styled.p`
   }
 `;
 
-const StyledLink = styled(Link)`
-  text-decoration: none;
-  outline: none;
+const Title = styled.h1`
   display: inline;
+  margin: auto;
+  color: #111;
+  font-weight: normal;
+  font-size: 1.125em;
+
+  &:not(.site-title):before {
+    display: none;
+  }
 
   &:focus {
-    outline: none;
+    outline: thin dotted;
+    text-decoration: underline;
   }
 `;
