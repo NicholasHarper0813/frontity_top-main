@@ -1,10 +1,10 @@
-import React from "react";
 import { connect, styled } from "frontity";
+import React from "react";
 import Link from "../link";
+import Categories from "../entry-meta/categories";
+import PostedOn from "../entry-meta/posted-on";
 import FeaturedMedia from "../featured-media";
 import Author from "../entry-meta/author";
-import PostedOn from "../entry-meta/posted-on";
-import Categories from "../entry-meta/categories";
 import Tags from "../entry-meta/tags";
 
 const Item = ({ state, item }) => (
