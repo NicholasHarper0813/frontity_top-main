@@ -21,15 +21,10 @@ const PostHeader = ({ post }) => (
 );
 
 const Post = ({ state, actions, libraries }) => {
-  // Get info of current post.
   const data = state.source.get(state.router.link);
-  // Get the the post.
   const post = state.source[data.type][data.id];
-
-  // Get the Html2React component.
   const Html2React = libraries.html2react.Component;
 
-  // Prefetch home posts and the list component.
   useEffect(() => {
     actions.source.fetch("/");
     List.preload();
@@ -78,23 +73,6 @@ const Section = styled.div`
   margin-top: calc(0.5rem);
 `;
 
-const EntryMeta = styled.div`
-  margin-bottom: 1rem !important;
-  color: ${({ theme }) =>
-    theme.featured.showOnPost ? "white" : "rgb(118, 118, 118)"};
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-
-  & .svg-icon {
-    margin-right: 0.5em;
-  }
-
-  @media (min-width: 768px) {
-    margin-bottom: 0 !important;
-  }
-`;
-
 const EntryFooter = styled.footer`
   margin-bottom: 1rem !important;
   color: rgb(118, 118, 118);
@@ -112,6 +90,23 @@ const EntryFooter = styled.footer`
 
   & a:hover {
     color: ${({ theme }) => theme.color};
+  }
+
+  @media (min-width: 768px) {
+    margin-bottom: 0 !important;
+  }
+`;
+
+const EntryMeta = styled.div`
+  margin-bottom: 1rem !important;
+  color: ${({ theme }) =>
+    theme.featured.showOnPost ? "white" : "rgb(118, 118, 118)"};
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+
+  & .svg-icon {
+    margin-right: 0.5em;
   }
 
   @media (min-width: 768px) {
