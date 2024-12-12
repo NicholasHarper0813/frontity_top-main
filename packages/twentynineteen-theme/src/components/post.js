@@ -1,12 +1,12 @@
 import React, { useEffect } from "react";
 import { connect, styled } from "frontity";
-import List from "./list";
-import Header from "./header";
 import PostFeaturedMedia from "./post-featured-media";
-import Author from "./entry-meta/author";
-import PostedOn from "./entry-meta/posted-on";
 import Categories from "./entry-meta/categories";
+import PostedOn from "./entry-meta/posted-on";
+import Author from "./entry-meta/author";
 import Tags from "./entry-meta/tags";
+import Header from "./header";
+import List from "./list";
 
 const PostHeader = ({ post }) => (
   <PostTitle>
