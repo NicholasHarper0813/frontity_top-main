@@ -1,26 +1,34 @@
 import Theme from "./components";
 import image from "@frontity/html2react/processors/image";
 
-const twentyNineteenTheme = {
+const twentyNineteenTheme = 
+{
   name: "@frontity/twentynineteen-theme",
-  roots: {
+  roots: 
+  {
     theme: Theme
   },
-  state: {
-    theme: {
+  state:
+  {
+    theme: 
+    {
       color: "#0073aa",
       menu: [],
-      featured: {
+      featured: 
+      {
         showOnList: false,
         showOnPost: false
       }
     }
   },
-  actions: {
+  actions: 
+  {
     theme: {}
   },
-  libraries: {
-    html2react: {
+  libraries: 
+  {
+    html2react: 
+    {
       processors: [image]
     }
   }
