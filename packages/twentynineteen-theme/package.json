@@ -11,20 +11,24 @@
   ],
   "homepage": "https://frontity.org",
   "license": "GNU GPL 2",
-  "repository": {
+  "repository":
+  {
     "type": "git",
     "url": "https://github.com/imranhsayed/frontity-twentynineteen"
   },
-  "bugs": {
+  "bugs":
+  {
     "url": "https://community.frontity.org"
   },
-  "dependencies": {
+  "dependencies":
+  {
     "@frontity/components": "^1.1.13",
     "@frontity/html2react": "^1.1.13",
     "emotion-theming": "^10.0.19",
     "react-spinners": "^0.6.1"
   },
-  "peerDependencies": {
+  "peerDependencies":
+  {
     "frontity": "^1.4.1"
   }
 }
