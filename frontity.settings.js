@@ -1,7 +1,10 @@
-const settings = {
+const settings = 
+{
   name: "frontity-twentynineteen",
-  state: {
-    frontity: {
+  state: 
+  {
+    frontity: 
+    {
       url: "https://test.frontity.io",
       title: "Test Frontity Blog",
       description: "WordPress installation for Frontity development"
@@ -10,8 +13,10 @@ const settings = {
   packages: [
     {
       name: "@frontity/twentynineteen-theme",
-      state: {
-        theme: {
+      state: 
+      {
+        theme: 
+        {
           color: "#0073aa",
           menu: [
             ["Home", "/"],
@@ -20,7 +25,8 @@ const settings = {
             ["Japan", "/tag/japan/"],
             ["About Us", "/about-us/"]
           ],
-          featured: {
+          featured: 
+          {
             showOnList: true,
             showOnPost: true
           }
@@ -29,8 +35,10 @@ const settings = {
     },
     {
       name: "@frontity/wp-source",
-      state: {
-        source: {
+      state: 
+      {
+        source: 
+        {
           api: "https://test.frontity.io/wp-json"
         }
       }
